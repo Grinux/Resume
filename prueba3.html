@@ -1,0 +1,37 @@
+<html data-ng-app="page.viewer" data-enforce-browser>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<body>
+    <div class="prin">
+    	
+    </div>
+
+   <script type="text/javascript">
+    var name = "eaRRy Madrigal";
+
+function nameChanger(oldName) {
+    var finalName = oldName;
+    space = finalName.search(" ");
+    surName = finalName.slice(space);
+    name = finalName.slice(0,space);
+    surName = surName.toUpperCase();
+    _name = name.slice(1) ;
+    _name = _name.toLowerCase();
+    
+    name = name.slice(0,1);
+    name = name.toUpperCase() ;
+    _name = name + _name;
+    console.log(name);
+    finalName = _name.concat(surName);
+          
+    return finalName;
+};
+
+// Did your code work? The line below will tell you!
+console.log(nameChanger(name));
+    </script>
+</body>
+</html>
