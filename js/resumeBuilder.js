@@ -76,33 +76,3 @@ var projects = {
 
 };
 
-HTMLheaderName = HTMLheaderName.replace("%data%", formattedName);
-HTMLheaderRole = HTMLheaderRole.replace("%data%" , formattedRole);
-//HTMLcontactGeneric = HTMLcontactGeneric.replace("%contact%" , 'contact');
-//HTMLcontactGeneric = HTMLcontactGeneric.replace("%data%" , myBio.name);
-
-formatMobile = HTMLmobile.replace("%data%", myBio.contactInfo.phone);
-formatEmail = HTMLemail.replace("%data%", myBio.contactInfo.email);
-formatTwitter = HTMLtwitter.replace("%data%" , myBio.contactInfo.twitter);
-formatGithub = HTMLgithub.replace("%data%" , myBio.contactInfo.github);
-formatBlog = HTMLblog.replace("%data%" , myBio.contactInfo.blog );
-formatBioPic = HTMLbioPic.replace("%data%" , myBio.photo);
-formatWelcomeMsg = HTMLWelcomeMsg.replace("%data%" , myBio.welcomeMessage);
-formatSkills = HTMLskills.replace("%data%" , myBio.skills);
-formatPosition = HTMLworkTitle.replace("%data%" , work["position"])
-
-
-$("#header").prepend(HTMLheaderRole);
-$("#header").prepend(HTMLheaderName);
-//$("#topContacts").apppend(HTMLcontactGeneric);
-
-$("#topContacts").append(formatEmail);
-$("#topContacts").append(formatMobile);
-$("#topContacts").append(formatTwitter);
-$("#topContacts").append(formatGithub);
-$("#topContacts").append(formatBlog);
-$("#header").append(formatBioPic);
-$("#header").append(formatWelcomeMsg);
-$("#header").append(HTMLskillsStart);
-$("#skills").append(formatSkills);
-$("#workExperience").append(formatPosition);
