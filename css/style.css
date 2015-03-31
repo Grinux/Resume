@@ -37,7 +37,7 @@ h3 {
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: #4A4A4A;
   line-height: 17px;
 }
@@ -62,7 +62,7 @@ h2, h3, h4, h5 {
   font-size: 14px;
   color: #999999;
   line-height: 16px;
-  float: right;
+  float: inherit;
 
 }
 
@@ -80,7 +80,7 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
@@ -127,7 +127,12 @@ a {
   justify-content: space-around;
   padding: 10px;
 }
-
+.flex-item1{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .center-content {
   padding-top: 2.5%;
   padding-left: 5%;
