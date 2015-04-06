@@ -109,8 +109,8 @@ Start here! initializeMap() is called when page is loaded.
 function initializeMap() {
 
   var locations;
-  var myLatLng = new google.maps.LatLng(39.571190,2.6466339);//Palma
-  var myLatLng2 = new google.maps.LatLng(39.5376306,2.45046939);//Paguera
+  var myLatLng = new google.maps.LatLng(39.571190,2.6466339);//Palma 39.571190,2.6466339
+  var myLatLng2 = new google.maps.LatLng(39.5376306,2.45046939);//Paguera 39.5376306,2.45046939
   var mapOptions = {
     disableDefaultUI: true,
     

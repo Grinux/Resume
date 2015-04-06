@@ -2,88 +2,92 @@ var formattedName = "Toni JULIA   ";
 var formattedRole = "  Web Developer";
 
 var myBio = {
-          "name" : 'Toni JULIA',
-        	"role" : 'Web Developer',
-          "contacts" : {
-                       "phone" : '637 100 879',
-                       "email" : 'grindersan@gmail.com',
-                       "github" : 'github.com/Grinux/',
-                       "twitter" : 'Notengo',
-                       "location" : 'Palma de Mallorca Spain'
-                    },
-          "welcomeMessage" : 'Welcome to my Resume',
-          "biopic" : 'images/fry.jpg',
-          "skills" : ['JavaScript ',' Jquery',' MongoDB',' Python ',' Unix'] ,
-          "blog" : 'wwww.tonijuliamuntaner.com',
+    "name": "Toni JULIA",
+    "role": "Web Developer",
+    "contacts": {
+        "phone": "637100879",
+        "email": "grindersan@gmail.com",
+        "github": "github.com/Grinux/",
+        "twitter": "Notengo",
+        "location": "Palma de Mallorca Spain"
+    },
+    "welcomeMessage": "Welcome to my Resume",
+    "biopic": "images/fry.jpg",
+    "skills": [
+        "JavaScript",
+        "Jquery",
+        "MongoDB",
+        "Python",
+        "Unix"
+    ],
+    "blog": "wwww.tonijuliamuntaner.com",
 
-          display : function(){
+     display : function(){
 
-                          HTMLheaderName = HTMLheaderName.replace("%data%", myBio.name);
-                          HTMLheaderRole = HTMLheaderRole.replace("%data%" , myBio.role);
-                          $("#header").prepend(HTMLheaderRole);
-                          $("#header").prepend(HTMLheaderName);
+            HTMLheaderName = HTMLheaderName.replace("%data%", myBio.name);
+            HTMLheaderRole = HTMLheaderRole.replace("%data%" , myBio.role);
+            $("#header").prepend(HTMLheaderRole);
+            $("#header").prepend(HTMLheaderName);
 
-                          formatEmail = HTMLemail.replace("%data%", myBio.contacts.email);
-                          $("#topContacts").append(formatEmail);
-                          $("#footerContacts").append(formatEmail);
+            formatEmail = HTMLemail.replace("%data%", myBio.contacts.email);
+            $("#topContacts").append(formatEmail);
+            $("#footerContacts").append(formatEmail);
 
-                          formatMobile = HTMLmobile.replace("%data%", myBio.contacts.phone);
-                          $("#topContacts").append(formatMobile);
-                          $("#footerContacts").append(formatMobile);
+            formatMobile = HTMLmobile.replace("%data%", myBio.contacts.phone);
+            $("#topContacts").append(formatMobile);
+            $("#footerContacts").append(formatMobile);
 
-                          formatTwitter = HTMLtwitter.replace("%data%" , myBio.contacts.twitter);
-                          $("#topContacts").append(formatTwitter);
-                          $("#footerContacts").append(formatTwitter);
+            formatTwitter = HTMLtwitter.replace("%data%" , myBio.contacts.twitter);
+            $("#topContacts").append(formatTwitter);
+            $("#footerContacts").append(formatTwitter);
 
-                          formatGithub = HTMLgithub.replace("%data%" , myBio.contacts.github);
-                          $("#topContacts").append(formatGithub);
-                          $("#footerContacts").append(formatGithub);
+            formatGithub = HTMLgithub.replace("%data%" , myBio.contacts.github);
+            $("#topContacts").append(formatGithub);
+            $("#footerContacts").append(formatGithub);
 
-                          formatBlog = HTMLblog.replace("%data%" , myBio.blog );
-                          $("#topContacts").append(formatBlog);
-                          $("#footerContacts").append(formatBlog);
+            formatBlog = HTMLblog.replace("%data%" , myBio.blog );
+            $("#topContacts").append(formatBlog);
+            $("#footerContacts").append(formatBlog);
 
-                          formatBioPic = HTMLbioPic.replace("%data%" , myBio.biopic);
-                          $("#header").append(formatBioPic);
+            formatBioPic = HTMLbioPic.replace("%data%" , myBio.biopic);
+            $("#header").append(formatBioPic);
 
-                          formatWelcomeMsg = HTMLWelcomeMsg.replace("%data%" , myBio.welcomeMessage);
-                          $("#header").append(formatWelcomeMsg);
+            formatWelcomeMsg = HTMLWelcomeMsg.replace("%data%" , myBio.welcomeMessage);
+            $("#header").append(formatWelcomeMsg);
 
-                          //skills in header with formatted data
-                                if (typeof myBio.skills !== 'undefined') {
+            //skills in header with formatted data
+                  if (typeof myBio.skills !== 'undefined') {
 
-                                          $('#header').append(HTMLskillsStart);
-                                          formatSkills = HTMLskills.replace("%data%" , myBio.skills);
+                        $('#header').append(HTMLskillsStart);
+                        formatSkills = HTMLskills.replace("%data%" , myBio.skills);
 
 
-                                          for(i = 0; i < myBio.skills.length; i++) {
+                        for(i = 0; i < myBio.skills.length; i++) {
 
-                                                    auxSkill = HTMLskills.replace("%data%",myBio.skills[i]);
-                                                    $('#skills').append(auxSkill);
+                                  auxSkill = HTMLskills.replace("%data%",myBio.skills[i]);
+                                  $('#skills').append(auxSkill);
 
-                                          }
+                        }
 
-                                }
-        }
+                    }
+}
 };
+
 myBio.display();
-
-
-
 
 var work = {
     "jobs" : [
         {
           "employer" : "Keeley" , 
           "title" : "Cooker" ,
-          "location": "Palma" ,
+          "location": "Pollensa Mallorca Spain" ,
           "dates": "2010-2012",
           "description": "House cooker for Keeleys family"
         },
         {
           "employer" : "Rustica" ,
           "title" : "Chef" ,
-          "location": "Paguera" ,
+          "location": "Paguera Mallorca Spain" ,
           "dates": "2012-2015",
           "description": "Chef in international restaurant"
         }
@@ -180,38 +184,38 @@ var education = {
       ],
     display : function(){
 
-        $('#education').append(HTMLschoolStart);
-            for(index in education.schools){
-                  
-                  var formatName = HTMLschoolName.replace('%data%' , education.schools[index].name);
-                  var formatDegree = HTMLschoolDegree.replace('%data%' , education.schools[index].degree);
-                  var formatDate = HTMLschoolDates.replace('%data%' , education.schools[index].dates);
-                  var formatLocation = HTMLschoolLocation.replace('%data%' , education.schools[index].location);
-                  var formatMajor = HTMLschoolMajor.replace('%data%' , education.schools[index].major);
+          $('#education').append(HTMLschoolStart);
+              for(index in education.schools){
+                    
+                    var formatName = HTMLschoolName.replace('%data%' , education.schools[index].name);
+                    var formatDegree = HTMLschoolDegree.replace('%data%' , education.schools[index].degree);
+                    var formatDate = HTMLschoolDates.replace('%data%' , education.schools[index].dates);
+                    var formatLocation = HTMLschoolLocation.replace('%data%' , education.schools[index].location);
+                    var formatMajor = HTMLschoolMajor.replace('%data%' , education.schools[index].major);
 
 
-                  $(".education-entry").append(formatName + formatDegree);
-                  $(".education-entry:last").append(formatDate);
-                  $(".education-entry").append(formatLocation);
-                  $(".education-entry:last").append(formatMajor);
-            }
+                    $(".education-entry").append(formatName + formatDegree);
+                    $(".education-entry:last").append(formatDate);
+                    $(".education-entry").append(formatLocation);
+                    $(".education-entry:last").append(formatMajor);
+              }
 
-        $('.education-entry').append(HTMLonlineClasses);
+          $('.education-entry').append(HTMLonlineClasses);
 
-            for(index in education.online){
-                  
-                  var formatonlineTitle = HTMLonlineTitle.replace('%data%' , education.online[index].title);
-                  var formatonlineSchool = HTMLonlineSchool.replace('%data%' , education.online[index].school);
-                  var formatonlineDates = HTMLonlineDates.replace('%data%' , education.online[index].dates);
-                  var formatonlineUrl = HTMLonlineURL.replace('%data%' , education.online[index].url);
+                    for(index in education.online){
+                          
+                          var formatonlineTitle = HTMLonlineTitle.replace('%data%' , education.online[index].title);
+                          var formatonlineSchool = HTMLonlineSchool.replace('%data%' , education.online[index].school);
+                          var formatonlineDates = HTMLonlineDates.replace('%data%' , education.online[index].dates);
+                          var formatonlineUrl = HTMLonlineURL.replace('%data%' , education.online[index].url);
 
-                  
-                  $(".education-entry").append(formatonlineTitle + formatonlineSchool);
-                  $(".education-entry").append(formatonlineDates);
-                  $(".education-entry").append(formatonlineUrl);
-                  
+                          
+                          $(".education-entry").append(formatonlineTitle + formatonlineSchool);
+                          $(".education-entry").append(formatonlineDates);
+                          $(".education-entry").append(formatonlineUrl);
+                          
 
-            }
+                    }
    }
 };
 education.display();
